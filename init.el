@@ -130,6 +130,7 @@
 (global-unset-key (kbd "C-x 3"))
 (global-unset-key (kbd "<f10>"))
 (global-unset-key (kbd "C-w"))
+(global-unset-key (kbd "C-t"))
 
 (global-set-key (kbd "C-s") 'save-buffer)
 (global-set-key (kbd "C-f") 'isearch-forward)
@@ -146,6 +147,7 @@
 (global-set-key (kbd "<f10>") 'fix-indentation)
 (global-set-key (kbd "C-x C-h") (lookup-key global-map (kbd "C-h")))
 (global-set-key (kbd "C-h") 'replace-string)
+(global-set-key (kbd "C-t") 'anything)
 
 ;; Save my desktop, please.
 (desktop-save-mode 1)
