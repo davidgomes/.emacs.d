@@ -41,8 +41,8 @@
 (ac-config-default)
 
 ;; Redo +
-(require 'redo+)
-(global-set-key (kbd "C-y") 'redo)
+;(require 'redo+)
+;(global-set-key (kbd "C-y") 'redo)
 
 ;; Vala Mode
 (autoload 'vala-mode "vala-mode" "Major mode for editing Vala code." t)
@@ -75,8 +75,8 @@
 
 ;; C++ Mode
 (c-set-offset 'access-label '-2)
-;; (c-set-offset 'inclass '4)
-(setq c-default-style "k&r"
+(c-set-offset 'inclass '4)
+(setq c-default-style "bsd"
       c-basic-offset 2)
 
 ;; Spit vertically
@@ -105,7 +105,7 @@
 ;; Go fullscreen!
 (defun toggle-fullscreen ()
   (interactive)
-  (set-frame-parameter nil 'fullscreen (if (frame-parameter nil 'fullscreen) nil 'fullboth)))
+  (set-frame-parameter nil 'fullscreen (if (global-set-key (kbd "<f11>") 'toggle-fullscreen))))
 
 ;; Deactivate menu-bar, tool-bar and scroll-bar
 (if (fboundp 'menu-bar-mode) (menu-bar-mode -1))
@@ -124,6 +124,7 @@
 (global-unset-key (kbd "C-s"))
 (global-unset-key (kbd "C-b"))
 (global-unset-key (kbd "C-x C-b"))
+(global-unset-key (kbd "C-x C-z"))
 (global-unset-key (kbd "C-x o"))
 (global-unset-key (kbd "C-x 0"))
 (global-unset-key (kbd "C-x 2"))
@@ -167,7 +168,7 @@
  '(default ((t (:family "Monaco" :foundry "xos4" :slant normal :weight normal :height 100 :width normal)))))
 
 (load-theme 'tango-dark t)
-(set-fringe-style 'no-fringes)
+;(set-fringe-style 'no-fringes)
 
 ;; Clear the eshell
 (defun eshell/clear ()
@@ -225,7 +226,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-safe-themes (quote ("09c2fd812c3c046379d84beb4795db273da1fe84b008dfbb4c03f54a10cf7f0e" "c1f0d3ec9563620ede55e0631ed3e959bcb619d5276b546f4ca1534f5c8db450" "ac69b7e2e928dc1560d5a556043c99d8cb0614c30957bd03dfe82be4a9e917ee" default)))
+ '(custom-safe-themes (quote ("1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "09c2fd812c3c046379d84beb4795db273da1fe84b008dfbb4c03f54a10cf7f0e" "c1f0d3ec9563620ede55e0631ed3e959bcb619d5276b546f4ca1534f5c8db450" "ac69b7e2e928dc1560d5a556043c99d8cb0614c30957bd03dfe82be4a9e917ee" default)))
  '(ecb-options-version "2.40"))
  '(custom-safe-themes (quote ("c1f0d3ec9563620ede55e0631ed3e959bcb619d5276b546f4ca1534f5c8db450"
                               "ac69b7e2e928dc1560d5a556043c99d8cb0614c30957bd03dfe82be4a9e917ee"
@@ -257,3 +258,7 @@
 
 ;; Put minimap on the right
 (setq minimap-window-location 'right)
+
+;; Haskell
+(custom-set-variables
+ '(haskell-mode-hook '(turn-on-haskell-indentation)))
