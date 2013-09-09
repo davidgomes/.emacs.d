@@ -13,12 +13,12 @@
 ;; it under the terms of the GNU General Public License as published by
 ;; the Free Software Foundation; either version 2 of the License, or
 ;; (at your option) any later version.
-;; 
+;;
 ;; This program is distributed in the hope that it will be useful,
 ;; but WITHOUT ANY WARRANTY; without even the implied warranty of
 ;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 ;; GNU General Public License for more details.
-;; 
+;;
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program; see the file COPYING.  If not, write to
 ;; the Free Software Foundation, Inc., 59 Temple Place - Suite 330,
@@ -121,7 +121,7 @@
 ;;;; Font-lock the attributes by searching for the
 ;;;; appropriate regex and marking it as TODO.
 	 ;;,`(,(concat "\\(" vala-attribute-regex "\\)")
-	 ;;   0 font-lock-function-name-face)	   
+	 ;;   0 font-lock-function-name-face)
 
 	 ;; Put a warning face on the opener of unclosed strings that
 	 ;; can't span lines.  Later font
@@ -134,14 +134,14 @@
 	   ;; `c-skip-comments-and-strings' work correctly.
 	   (concat ".\\(" c-string-limit-regexp "\\)")
 	   '((c-font-lock-invalid-string)))
-	   
+
 	 ;; Fontify keyword constants.
 	 ,@(when (c-lang-const c-constant-kwds)
 	     (let ((re (c-make-keywords-re nil
 			 (c-lang-const c-constant-kwds))))
 	       `((eval . (list ,(concat "\\<\\(" re "\\)\\>")
 			       1 c-constant-face-name)))))
-	   
+
 	 ;; Fontify all keywords except the primitive types.
 	 ,`(,(concat "\\<" (c-lang-const c-regular-keywords-regexp))
 	    1 font-lock-keyword-face)
@@ -244,7 +244,7 @@
 	 "callback" "signal" "var" "default"))
 
 ;; This allows the classes after the : in the class declartion to be
-;; fontified. 
+;; fontified.
 (c-lang-defconst c-typeless-decl-kwds
   vala '(":"))
 
@@ -325,6 +325,7 @@
   '(("else" "else" c-electric-continued-statement 0)
     ("while" "while" c-electric-continued-statement 0)
     ("catch" "catch" c-electric-continued-statement 0)
+    ("=>" "=>" c-electric-continued-statement 0)
     ("finally" "finally" c-electric-continued-statement 0)))
 
 (defvar vala-mode-map (let ((map (c-make-inherited-keymap)))

@@ -1,5 +1,5 @@
-;; Configuration file by David Gomes
-;; Many of the files included in my configuration were not made by me.
+;; Configuration file by David Gomes (github.com/davidgomes)
+;; Many of the files included in my configuration were not created by me.
 
 ;; Load plugins
 (add-to-list 'load-path "~/.emacs.d/")
@@ -23,6 +23,7 @@
 
 ;; Lines and columns
 (global-linum-mode 1)
+;;(hlinum-activate t)
 ;; (global-hl-line-mode 1)
 (column-number-mode 1)
 
@@ -41,15 +42,13 @@
 (ac-config-default)
 
 ;; Redo +
-;(require 'redo+) 
-;(global-set-key (kbd "C-y") 'redo)
+;;(require 'redo+)
+;;(global-set-key (kbd "C-y") 'redo)
 
 ;; Vala Mode
 (autoload 'vala-mode "vala-mode" "Major mode for editing Vala code." t)
 (add-to-list 'auto-mode-alist '("\\.vala$" . vala-mode))
-(add-to-list 'auto-mode-alist '("\\.vapi$" . vala-mode))
 (add-to-list 'file-coding-system-alist '("\\.vala$" . utf-8))
-(add-to-list 'file-coding-system-alist '("\\.vapi$" . utf-8))
 
 ;; Javascript stuff
 (setq js-indent-level 2)
@@ -73,6 +72,10 @@
 (autoload 'php-mode "php-mode.el" "Php mode." t)
 (setq auto-mode-alist (append '(("/*.\.php[345]?$" . php-mode)) auto-mode-alist))
 
+;; Haxe Mode
+(autoload 'php-mode "haxe-mode.el" "Haxe mode." t)
+(setq auto-mode-alist (append '(("/*.\.hx?$" . haxe-mode)) auto-mode-alist))
+
 ;; C++ Mode
 (c-set-offset 'access-label '-2)
 (c-set-offset 'inclass '4)
@@ -84,11 +87,11 @@
 (setq split-width-threshold nil)
 
 ;; Smooth scrolling
-(setq mouse-wheel-scroll-amount '(3 ((shift) . 3))) ;; One line at a time
-(setq mouse-wheel-progressive-speed nil)            ;; Don't accelerate scrolling
-(setq mouse-wheel-follow-mouse 't)                  ;; Scroll window under mouse
-(setq scroll-step 1)                                ;; Keyboard scroll one line at a time
-(setq scroll-margin 4)                              ;; Always 4 lines above/below cursor
+(setq mouse-wheel-scroll-amount '(3 ((shift) . 3))) ; One line at a time
+(setq mouse-wheel-progressive-speed nil)            ; Don't accelerate scrolling
+(setq mouse-wheel-follow-mouse 't)                  ; Scroll window under mouse
+(setq scroll-step 1)                                ; Keyboard scroll one line at a time
+(setq scroll-margin 4)                              ; Always 4 lines above/below cursor
 
 (column-number-mode 1)
 (show-paren-mode 1)
@@ -165,10 +168,10 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Monaco" :foundry "xos4" :slant normal :weight normal :height 100 :width normal)))))
+ '(default ((t (:family "DejaVu Sans Mono" :foundry "xos4" :slant normal :weight normal :height 100 :width normal)))))
 
 (load-theme 'tango-dark t)
-;(set-fringe-style 'no-fringes)
+;;(set-fringe-style 'no-fringes)
 
 ;; Clear the eshell
 (defun eshell/clear ()
@@ -179,6 +182,7 @@
 ;; Emacs compile/recompile
 (global-set-key (kbd "<f9>") 'recompile)
 
+;; Edited linum-update-window that adds a bit of padding to the right between linum and the text
 (defun linum-update-window (win)
   "Update line numbers for the portion visible in window WIN."
   (goto-char (window-start win))
@@ -226,12 +230,12 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-safe-themes (quote ("1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "09c2fd812c3c046379d84beb4795db273da1fe84b008dfbb4c03f54a10cf7f0e" "c1f0d3ec9563620ede55e0631ed3e959bcb619d5276b546f4ca1534f5c8db450" "ac69b7e2e928dc1560d5a556043c99d8cb0614c30957bd03dfe82be4a9e917ee" default)))
+ '(custom-safe-themes (quote ("1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365"
+                              "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6"
+                              "09c2fd812c3c046379d84beb4795db273da1fe84b008dfbb4c03f54a10cf7f0e"
+                              "c1f0d3ec9563620ede55e0631ed3e959bcb619d5276b546f4ca1534f5c8db450"
+                              "ac69b7e2e928dc1560d5a556043c99d8cb0614c30957bd03dfe82be4a9e917ee" default)))
  '(ecb-options-version "2.40"))
- '(haskell-mode-hook (quote (turn-on-haskell-indentation)))
- '(custom-safe-themes (quote ("c1f0d3ec9563620ede55e0631ed3e959bcb619d5276b546f4ca1534f5c8db450"
-                              "ac69b7e2e928dc1560d5a556043c99d8cb0614c30957bd03dfe82be4a9e917ee"
-                              default)))
 
 ;; IBuffer is one of the best things about Emacs
 (require 'ibuf-ext)
@@ -259,5 +263,3 @@
 
 ;; Put minimap on the right
 (setq minimap-window-location 'right)
-
-;; Haskell
