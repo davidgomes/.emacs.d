@@ -1,6 +1,9 @@
 ;; Configuration file by David Gomes (github.com/davidgomes)
 ;; Many of the files included in my configuration were not created by me.
 
+;; List of packages I also install:
+;;  web-mode scala-mode actionscript-mode anything
+
 ;; Load plugins
 (add-to-list 'load-path "~/.emacs.d/")
 
@@ -72,9 +75,10 @@
 (autoload 'php-mode "php-mode.el" "Php mode." t)
 (setq auto-mode-alist (append '(("/*.\.php[345]?$" . php-mode)) auto-mode-alist))
 
-;; Haxe Mode
-(autoload 'php-mode "haxe-mode.el" "Haxe mode." t)
-(setq auto-mode-alist (append '(("/*.\.hx?$" . haxe-mode)) auto-mode-alist))
+;; Haxe stuff (using actionscript-mode because haxe-mode doesn't work)
+(autoload 'actionscript-mode "actionscript-mode" "Major mode for actionscript." t)
+(add-to-list 'auto-mode-alist '("\\(.as|.hx)$" . actionscript-mode))
+
 
 ;; C++ Mode
 (c-set-offset 'access-label '-2)
