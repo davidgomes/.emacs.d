@@ -77,7 +77,7 @@
 
 ;; Haxe stuff (using actionscript-mode because haxe-mode doesn't work)
 (autoload 'actionscript-mode "actionscript-mode" "Major mode for actionscript." t)
-(add-to-list 'auto-mode-alist '("\\(.as|.hx)$" . actionscript-mode))
+(add-to-list 'auto-mode-alist '("\\.hx$" . actionscript-mode))
 
 
 ;; C++ Mode
