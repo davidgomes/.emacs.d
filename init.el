@@ -75,10 +75,9 @@
 (autoload 'php-mode "php-mode.el" "Php mode." t)
 (setq auto-mode-alist (append '(("/*.\.php[345]?$" . php-mode)) auto-mode-alist))
 
-;; Haxe stuff (using actionscript-mode because haxe-mode doesn't work)
+;; Haxe stuff (using actionscript-mode because haxe-mode doesn't seem to work)
 (autoload 'actionscript-mode "actionscript-mode" "Major mode for actionscript." t)
 (add-to-list 'auto-mode-alist '("\\.hx$" . actionscript-mode))
-
 
 ;; C++ Mode
 (c-set-offset 'access-label '-2)
@@ -172,9 +171,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "DejaVu Sans Mono" :foundry "xos4" :slant normal :weight normal :height 100 :width normal)))))
+ '(default ((t (:family "Monaco" :foundry "xos4" :slant normal :weight normal :height 95 :width normal)))))
 
-(load-theme 'tango-dark t)
+(load-theme 'wombat t)
 ;;(set-fringe-style 'no-fringes)
 
 ;; Clear the eshell
