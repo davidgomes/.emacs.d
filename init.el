@@ -56,8 +56,8 @@
 ;; Javascript stuff
 (setq js-indent-level 2)
 (autoload 'javascript-mode "javascript-mode" "Javascript editing mode." t)
-(add-to-list 'auto-mode-alist '("\\.js$" . js-mode))
-(add-to-list 'interpreter-mode-alist '("js" . js-mode))
+(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+(add-to-list 'interpreter-mode-alist '("js" . js2-mode))
 
 ;; CSS stuff
 (setq css-indent-offset 2)
