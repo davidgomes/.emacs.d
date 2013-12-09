@@ -85,7 +85,7 @@
 
 ;; C++ Mode
 (c-set-offset 'access-label '-2)
-(c-set-offset 'inclass '4)
+(c-set-offset 'inclass '2)
 (setq c-default-style "bsd"
       c-basic-offset 2)
 
@@ -175,7 +175,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Monaco" :foundry "xos4" :slant normal :weight normal :height 95 :width normal)))))
+ '(default ((t (:family "Monaco" :foundry "xos4" :slant normal :weight normal :height 105 :width normal)))))
 
 (load-theme 'wombat t)
 ;;(set-fringe-style 'no-fringes)
@@ -237,12 +237,9 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(custom-safe-themes (quote ("1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365"
-                              "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6"
-                              "09c2fd812c3c046379d84beb4795db273da1fe84b008dfbb4c03f54a10cf7f0e"
-                              "c1f0d3ec9563620ede55e0631ed3e959bcb619d5276b546f4ca1534f5c8db450"
-                              "ac69b7e2e928dc1560d5a556043c99d8cb0614c30957bd03dfe82be4a9e917ee" default)))
- '(ecb-options-version "2.40"))
+ '(custom-safe-themes (quote ("18d91d95e20450b0cdab4d7eed600e80c22cc7a4153a87989daa5a1c5aff3b83" "99cbc2aaa2b77374c2c06091494bd9d2ebfe6dc5f64c7ccdb36c083aff892f7d" "2affb26fb9a1b9325f05f4233d08ccbba7ec6e0c99c64681895219f964aac7af" "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "09c2fd812c3c046379d84beb4795db273da1fe84b008dfbb4c03f54a10cf7f0e" "c1f0d3ec9563620ede55e0631ed3e959bcb619d5276b546f4ca1534f5c8db450" "ac69b7e2e928dc1560d5a556043c99d8cb0614c30957bd03dfe82be4a9e917ee" default)))
+ '(ecb-options-version "2.40")
+ '(nyan-mode t))
 
 ;; IBuffer is one of the best things about Emacs
 (require 'ibuf-ext)
@@ -270,3 +267,10 @@
 
 ;; Put minimap on the right
 (setq minimap-window-location 'right)
+
+;; Ido Mode
+(setq ido-enable-flex-matching t)
+(setq ido-everywhere t)
+(ido-mode 1)
+(setq ido-use-filename-at-point 'guess)
+(setq ido-create-new-buffer 'always)
