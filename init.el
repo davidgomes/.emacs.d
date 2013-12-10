@@ -3,9 +3,9 @@
 
 ;; List of packages I also install:
 
-; actionscript-mode ample-zen-theme anything calmer-forest-theme
-; color-theme ecb hackernews haxe-mode js2-mode minimap monokai-theme
-; nyan-mode powerline redo+ scala-mode2 web-mode
+;; actionscript-mode ample-zen-theme ecb find-file-in-project hackernews
+;; haxe-mode helm js2-mode minimap monokai-theme nyan-mode popwin powerline
+;; redo+ scala-mode2 web-mode
 
 
 ;; Load plugins
@@ -146,8 +146,9 @@
 (global-set-key (kbd "<f12>") 'delete-trailing-whitespace)
 (global-set-key (kbd "<f10>") 'fix-indentation)
 (global-set-key (kbd "C-j") 'replace-string)
-(global-set-key (kbd "C-t") 'anything)
+(global-set-key (kbd "C-t") 'helm-for-files)
 (global-set-key (kbd "<f9>") 'recompile)
+(global-set-key (kbd "C-x k") 'kill-this-buffer)
 
 ;; Save my desktop Emacs, please.
 (desktop-save-mode 1)
