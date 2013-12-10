@@ -3,3 +3,5 @@ elpa/
 .emacs*
 *.dat
 auto-save-list/
+eshell/
+url/
