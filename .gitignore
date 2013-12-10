@@ -1,2 +1,5 @@
 elpa/
 .*
+.emacs*
+*.dat
+auto-save-list/

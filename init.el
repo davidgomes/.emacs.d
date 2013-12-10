@@ -175,7 +175,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Monaco" :foundry "xos4" :slant normal :weight normal :height 105 :width normal)))))
+ '(default ((t (:family "Monaco" :foundry "xos4" :slant normal :weight normal :height 100 :width normal)))))
 
 (load-theme 'wombat t)
 ;;(set-fringe-style 'no-fringes)
@@ -263,7 +263,7 @@
 ;; Disable ECB tip of the day
 (setq ecb-tip-of-the-day nil)
 (global-font-lock-mode 1)
-(setq ecb-layout-name "left12")
+(setq ecb-layout-name "sources-only")
 
 ;; Put minimap on the right
 (setq minimap-window-location 'right)
