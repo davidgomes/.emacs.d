@@ -137,7 +137,7 @@
 (global-set-key (kbd "C-d") (lambda () (interactive) (comment-or-uncomment-region (line-beginning-position) (line-end-position))))
 (global-set-key (kbd "C-k") 'kill-whole-line)
 (global-set-key (kbd "C-l") 'goto-line)
-(global-set-key (kbd "<f11>") 'toggle-fullscreen)
+;; (global-set-key (kbd "<f11>") 'toggle-fullscreen)
 (global-set-key (kbd "<C-tab>") 'next-multiframe-window)
 (global-set-key (kbd "<C-S-iso-lefttab>") 'previous-multiframe-window)
 (global-set-key (kbd "C-0") 'delete-window)
@@ -238,8 +238,8 @@
 (setq minimap-window-location 'right)
 
 ;; Ido Mode
-(setq ido-enable-flex-matching t)
-(setq ido-everywhere t)
-(ido-mode 1)
-(setq ido-use-filename-at-point 'guess)
-(setq ido-create-new-buffer 'always)
+;; (setq ido-enable-flex-matching t)
+;; (setq ido-everywhere t)
+;; (ido-mode 1)
+;; (setq ido-use-filename-at-point 'guess)
+;; (setq ido-create-new-buffer 'always)
