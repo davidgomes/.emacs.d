@@ -3,11 +3,6 @@
 
 ;; List of packages I also install:
 
-;; actionscript-mode ample-zen-theme ecb find-file-in-project hackernews
-;; haxe-mode helm js2-mode minimap monokai-theme nyan-mode popwin powerline
-;; redo+ scala-mode2 web-mode
-
-
 ;; Load plugins
 (add-to-list 'load-path "~/.emacs.d/")
 
@@ -159,7 +154,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Monaco" :foundry "xos4" :slant normal :weight normal :height 100 :width normal)))))
+ '(default ((t (:family "Monospace" :foundry "xos4" :slant normal :weight normal :height 100 :width normal)))))
 
 (load-theme 'wombat t)
 
@@ -243,3 +238,26 @@
 ;; (ido-mode 1)
 ;; (setq ido-use-filename-at-point 'guess)
 ;; (setq ido-create-new-buffer 'always)
+
+;; Packages that I like to keep across installs
+(setq required-packages
+      '(ample-zen-theme
+        ecb
+        hackernews
+        helpjs2-mode
+        minimap
+        monokai-theme
+        nyan-mode
+        powerline
+        redo+
+        web-mode))
+
+;; Installs missing packages
+(defun install-missing-packages ()
+  "Installs required packages that are missing"
+  (interactive)
+  (mapc (lambda (package)
+          (unless (package-installed-p package)
+            (package-install package)))
+        required-packages)
+  (message "Installed all missing packages!"))
