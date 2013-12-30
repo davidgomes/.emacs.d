@@ -1,8 +1,6 @@
 ;; Configuration file by David Gomes (github.com/davidgomes)
 ;; Many of the files included in my configuration were not created by me.
 
-;; List of packages I also install:
-
 ;; Load plugins
 (add-to-list 'load-path "~/.emacs.d/")
 
