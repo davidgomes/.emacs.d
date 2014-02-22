@@ -155,7 +155,7 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Monospace" :foundry "xos4" :slant normal :weight normal :height 100 :width normal)))))
 
-(load-theme 'monokai t)
+(load-theme 'wombat t)
 
 ;; Edited linum-update-window that adds a bit of padding to the right between linum and the text
 (defun linum-update-window (win)
@@ -244,6 +244,7 @@
         ecb
         hackernews
         minimap
+        monokai-theme
         nyan-mode
         powerline
         redo+
