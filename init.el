@@ -245,6 +245,7 @@
         hackernews
         minimap
         monokai-theme
+        less-css-mode
         nyan-mode
         powerline
         redo+
