@@ -80,8 +80,7 @@
 (add-to-list 'auto-mode-alist '("\\.hx$" . actionscript-mode))
 
 ;; C++ Mode
-;; (c-set-offset 'access-label '-2)
-(c-set-offset 'access-label '1)
+(c-set-offset 'access-label '-2)
 (c-set-offset 'inclass '4)
 (setq c-default-style "bsd"
       c-basic-offset 2)
@@ -153,7 +152,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Monospace" :foundry "xos4" :slant normal :weight normal :height 100 :width normal)))))
+ '(default ((t (:family "Monaco" :foundry "xos4" :slant normal :weight normal :height 100 :width normal)))))
 
 (load-theme 'wombat t)
 
@@ -222,34 +221,10 @@
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 
 ;; ECB Configuration
-(setq stack-trace-on-error t)
 (setq ecb-tip-of-the-day nil)
 (global-font-lock-mode 1)
-(setq ecb-layout-name "sources-only")
 (setq ecb-windows-width 0.15)
-
-;; Put minimap on the right
-(setq minimap-window-location 'right)
-
-;; Ido Mode
-;; (setq ido-enable-flex-matching t)
-;; (setq ido-everywhere t)
-;; (ido-mode 1)
-;; (setq ido-use-filename-at-point 'guess)
-;; (setq ido-create-new-buffer 'always)
-
-;; Packages that I like to keep across installs
-(setq required-packages
-      '(ample-zen-theme
-        ecb
-        hackernews
-        minimap
-        monokai-theme
-        less-css-mode
-        nyan-mode
-        powerline
-        redo+
-        web-mode))
+(setq ecb-examples-bufferinfo-buffer-name nil)
 
 ;; Installs missing packages
 (defun install-missing-packages ()
