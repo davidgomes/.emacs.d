@@ -220,11 +220,28 @@
                          ("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 
+;; Put minimap on the right
+(setq minimap-window-location 'right)
+
 ;; ECB Configuration
 (setq ecb-tip-of-the-day nil)
 (global-font-lock-mode 1)
 (setq ecb-windows-width 0.15)
 (setq ecb-examples-bufferinfo-buffer-name nil)
+
+;; List all packages
+(setq required-packages
+      '(ample-zen-theme
+        ecb
+        hackernews
+        minimap
+        monokai-theme
+        less-css-mode
+        markdown-mode
+        nyan-mode
+        powerline
+        redo+
+        web-mode))
 
 ;; Installs missing packages
 (defun install-missing-packages ()
