@@ -234,6 +234,7 @@
       '(ample-zen-theme
         ecb
         hackernews
+        handlebars-mode
         minimap
         monokai-theme
         less-css-mode
@@ -241,6 +242,7 @@
         nyan-mode
         powerline
         redo+
+        rhtml-mode
         web-mode))
 
 ;; Installs missing packages
