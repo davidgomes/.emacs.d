@@ -80,8 +80,8 @@
 (add-to-list 'auto-mode-alist '("\\.hx$" . actionscript-mode))
 
 ;; C++ Mode
-(c-set-offset 'access-label '-2)
-(c-set-offset 'inclass '4)
+;; (c-set-offset 'access-label '-2)
+(c-set-offset 'inclass '2)
 (setq c-default-style "bsd"
       c-basic-offset 2)
 
@@ -152,7 +152,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Monaco" :foundry "xos4" :slant normal :weight normal :height 100 :width normal)))))
+ '(default ((t (:family "Monospace" :foundry "xos4" :slant normal :weight normal :height 90 :width normal)))))
 
 (load-theme 'wombat t)
 
