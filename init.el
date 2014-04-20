@@ -142,6 +142,7 @@
 (global-set-key (kbd "C-t") 'helm-for-files)
 (global-set-key (kbd "<f9>") 'recompile)
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
+(global-set-key (kbd "C-w") 'execute-extended-command)
 
 ;; Save my desktop Emacs, please.
 (desktop-save-mode 1)
