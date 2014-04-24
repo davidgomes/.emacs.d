@@ -22,7 +22,7 @@
 (column-number-mode 1)
 (show-paren-mode 1)
 (size-indication-mode 1)
-(menu-bar-mode 0)
+(menu-bar-mode 1)
 (scroll-bar-mode 0)
 (tool-bar-mode 0)
 
@@ -153,7 +153,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Monospace" :foundry "xos4" :slant normal :weight normal :height 90 :width normal)))))
+ '(default ((t (:family "Monaco" :foundry "xos4" :slant normal :weight normal :height 130 :width normal)))))
 
 (load-theme 'wombat t)
 
@@ -251,7 +251,7 @@
   "Installs required packages that are missing"
   (interactive)
   (mapc (lambda (package)
-          (unless (package-installed-p package)
+          (unless (package-installed-p package)monaco
             (package-install package)))
         required-packages)
   (message "Installed all missing packages!"))
