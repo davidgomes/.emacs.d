@@ -100,10 +100,6 @@
 (require 'fixme-mode)
 (fixme-mode 1)
 
-;; Fix copy/paste between X applications and GNU Emacs
-(setq x-select-enable-clipboard t)
-(setq interprogram-paste-function 'x-cut-buffer-or-selection-value)
-
 ;; Fix all indentation (I love this so much)
 (defun fix-indentation ()
   "indent whole buffer"
@@ -255,3 +251,8 @@
             (package-install package)))
         required-packages)
   (message "Installed all missing packages!"))
+
+;; A fix for Emacs on OS X and inserting brackets
+(setq mac-option-modifier nil
+      mac-command-modifier 'meta
+      x-select-enable-clipboard t)
