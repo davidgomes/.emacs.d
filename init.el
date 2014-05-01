@@ -121,6 +121,8 @@
 (global-unset-key (kbd "C-w"))
 (global-unset-key (kbd "C-t"))
 
+(setq mac-command-modifier 'super)
+
 (global-set-key (kbd "C-s") 'save-buffer)
 (global-set-key (kbd "C-f") 'isearch-forward)
 (global-set-key (kbd "C-d") (lambda () (interactive) (comment-or-uncomment-region (line-beginning-position) (line-end-position))))
@@ -130,8 +132,8 @@
 (global-set-key (kbd "<C-tab>") 'next-multiframe-window)
 (global-set-key (kbd "<C-S-iso-lefttab>") 'previous-multiframe-window)
 (global-set-key (kbd "C-0") 'delete-window)
-(global-set-key (kbd "C-2") 'split-window-below)
-(global-set-key (kbd "C-3") 'split-window-right)
+(global-set-key (kbd "M-2") 'split-window-below)
+(global-set-key (kbd "M-3") 'split-window-right)
 (global-set-key (kbd "<f12>") 'delete-trailing-whitespace)
 (global-set-key (kbd "<f10>") 'fix-indentation)
 (global-set-key (kbd "C-j") 'replace-string)
@@ -259,3 +261,8 @@
 
 ;; Another fix for Emacs on OS X, stop the beeping on scrolling
 (setq ring-bell-function #'ignore)
+
+;; Assembler for MIPS uses #, not ;
+(add-hook 'asm-mode-set-comment-hook
+          '(lambda ()
+             (setq asm-comment-char ?#)))
