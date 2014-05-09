@@ -234,7 +234,6 @@
         ecb
         hackernews
         handlebars-mode
-        minimap
         monokai-theme
         less-css-mode
         markdown-mode
