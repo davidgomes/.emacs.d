@@ -240,6 +240,7 @@
         nyan-mode
         powerline
         redo+
+        nav
         rhtml-mode
         web-mode))
 
