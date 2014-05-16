@@ -230,8 +230,7 @@
 
 ;; List all packages
 (setq required-packages
-      '(ample-zen-theme
-        ecb
+      '(ecb
         hackernews
         handlebars-mode
         monokai-theme
