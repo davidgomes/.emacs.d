@@ -249,7 +249,7 @@
   (interactive)
   (mapc (lambda (package)
           (unless (package-installed-p package)monaco
-            (package-install package)))
+                  (package-install package)))
         required-packages)
   (message "Installed all missing packages!"))
 
