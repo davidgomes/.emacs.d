@@ -265,3 +265,6 @@
 (add-hook 'asm-mode-set-comment-hook
           '(lambda ()
              (setq asm-comment-char ?#)))
+
+;; No more typing the whole yes or no. Just y or n will do.
+(fset 'yes-or-no-p 'y-or-n-p)
