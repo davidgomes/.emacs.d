@@ -121,8 +121,6 @@
 (global-unset-key (kbd "C-w"))
 (global-unset-key (kbd "C-t"))
 
-(setq mac-command-modifier 'super)
-
 (global-set-key (kbd "C-s") 'save-buffer)
 (global-set-key (kbd "C-f") 'isearch-forward)
 (global-set-key (kbd "C-d") (lambda () (interactive) (comment-or-uncomment-region (line-beginning-position) (line-end-position))))
@@ -255,7 +253,6 @@
 
 ;; A fix for Emacs on OS X and inserting brackets
 (setq mac-option-modifier nil
-      mac-command-modifier 'meta
       x-select-enable-clipboard t)
 
 ;; Another fix for Emacs on OS X, stop the beeping on scrolling
@@ -269,5 +266,6 @@
 ;; No more typing the whole yes or no. Just y or n will do.
 (fset 'yes-or-no-p 'y-or-n-p)
 
-(mac-command-modifier 'control)
-(mac-control-modifier 'meta)
+;; Use Command for C-v, C-x, C-p, etc
+(setq mac-command-modifier 'ctrl)
+(setq mac-option-modifier 'meta)
