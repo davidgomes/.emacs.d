@@ -267,5 +267,5 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 ;; Use Command for C-v, C-x, C-p, etc
-(setq mac-command-modifier 'ctrl)
-(setq mac-option-modifier 'meta)
+;; (setq mac-command-modifier 'ctrl)
+;; (setq mac-option-modifier 'meta)
