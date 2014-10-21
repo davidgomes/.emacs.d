@@ -2,7 +2,7 @@
 ;; Many of the files included in my configuration were not created by me.
 
 ;; Load plugins
-(add-to-list 'load-path "~/.emacs.d/")
+(add-to-list 'load-path "~/.emacs.d/lisp/")
 
 ;; No splash screen
 (setq inhibit-splash-screen t)
