@@ -35,9 +35,8 @@
 (setq auto-save-default nil)
 
 ;; Set up auto complete
-(add-to-list 'load-path "/home/david/.emacs.d/")
 (require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "/home/david/.emacs.d/ac-dict")
+(add-to-list 'ac-dictionary-directories "/Users/david/.emacs.d/ac-dict/")
 (ac-config-default)
 
 ;; Redo +
