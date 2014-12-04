@@ -268,3 +268,6 @@
 ;; Use Command for C-v, C-x, C-p, etc
 ;; (setq mac-command-modifier 'ctrl)
 ;; (setq mac-option-modifier 'meta)
+
+;; Haskell Mode Indentation
+(add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
