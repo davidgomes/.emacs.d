@@ -134,7 +134,7 @@
 (global-set-key (kbd "<f12>") 'delete-trailing-whitespace)
 (global-set-key (kbd "<f10>") 'fix-indentation)
 (global-set-key (kbd "C-j") 'replace-string)
-(global-set-key (kbd "C-t") 'helm-for-files)
+(global-set-key (kbd "s-t") 'helm-for-files)
 (global-set-key (kbd "<f9>") 'recompile)
 (global-set-key (kbd "C-x k") 'kill-this-buffer)
 (global-set-key (kbd "C-w") 'execute-extended-command)
@@ -208,7 +208,7 @@
 (require 'ibuf-ext)
 (add-to-list 'ibuffer-never-show-predicates "^\\*Messages")
 (add-to-list 'ibuffer-never-show-predicates "^\\*Completions")
-(global-set-key (kbd "C-b") 'ibuffer)
+(global-set-key (kbd "s-b") 'ibuffer)
 (kill-buffer "*scratch*")
 
 ;; Add some package repositories
