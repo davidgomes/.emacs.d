@@ -5,6 +5,7 @@
 
 ;; Load plugins
 (add-to-list 'load-path "~/.emacs.d/lisp/")
+(add-to-list 'custom-theme-load-path "~/.emacs.d/lisp")
 
 ;; No splash screen
 (setq inhibit-splash-screen t)
