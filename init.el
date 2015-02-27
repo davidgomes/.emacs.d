@@ -53,6 +53,7 @@
 
 ;; Javascript stuff
 (setq js-indent-level 2)
+(setq jsx-indent-level 2)
 (autoload 'javascript-mode "javascript-mode" "Javascript editing mode." t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'interpreter-mode-alist '("js" . js2-mode))
@@ -60,6 +61,7 @@
 ;; HTML/Web stuff
 (add-to-list 'auto-mode-alist '("\\.html$" . web-mode))
 (add-to-list 'interpreter-mode-alist '("html" . web-mode))
+(setq web-mode-markup-indent-offset 2)
 
 ;; CSS stuff
 (setq css-indent-offset 2)
@@ -148,7 +150,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Droid Sans Mono" :foundry "xos4" :slant normal :weight normal :height 170 :width normal)))))
+ '(default ((t (:family "Inconsolata" :foundry "xos4" :slant normal :weight normal :height 150 :width normal)))))
 
 (load-theme 'bliss t)
 
@@ -267,9 +269,10 @@
 ;; No more typing the whole yes or no. Just y or n will do.
 (fset 'yes-or-no-p 'y-or-n-p)
 
-;; Use Command for C-v, C-x, C-p, etc
-;; (setq mac-command-modifier 'ctrl)
-;; (setq mac-option-modifier 'meta)
-
 ;; Haskell Mode Indentation
 (add-hook 'haskell-mode-hook 'turn-on-haskell-indentation)
+
+;; Define location of gnutls-cli on OS X, instaled via brew
+(setq starttls-use-gnutls t
+      starttls-gnutls-program "/usr/local/bin/gnutls-cli"
+      starttls-extra-arguments nil)
