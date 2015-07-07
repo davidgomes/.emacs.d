@@ -28,6 +28,7 @@
 (menu-bar-mode 1)
 (scroll-bar-mode 0)
 (tool-bar-mode 0)
+(setq ns-use-native-fullscreen nil)
 
 ;; Modern keyboard shortcuts
 (cua-mode 1)
@@ -150,7 +151,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Inconsolata" :foundry "xos4" :slant normal :weight normal :height 150 :width normal)))))
+ '(default ((t (:family "Menlo" :foundry "xos4" :slant normal :weight normal :height 150 :width normal)))))
 
 (load-theme 'bliss t)
 
@@ -205,7 +206,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("8afd01e30f62250645c6d68dce8e3581b606aad57292ea88c3ae1bd37fc29285" "569dc84822fc0ac6025f50df56eeee0843bffdeceff2c1f1d3b87d4f7d9fa661" "73fe242ddbaf2b985689e6ec12e29fab2ecd59f765453ad0e93bc502e6e478d6" "f0ea6118d1414b24c2e4babdc8e252707727e7b4ff2e791129f240a2b3093e32" "2b5aa66b7d5be41b18cc67f3286ae664134b95ccc4a86c9339c886dfd736132d" "18d91d95e20450b0cdab4d7eed600e80c22cc7a4153a87989daa5a1c5aff3b83" "99cbc2aaa2b77374c2c06091494bd9d2ebfe6dc5f64c7ccdb36c083aff892f7d" "2affb26fb9a1b9325f05f4233d08ccbba7ec6e0c99c64681895219f964aac7af" "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "09c2fd812c3c046379d84beb4795db273da1fe84b008dfbb4c03f54a10cf7f0e" "c1f0d3ec9563620ede55e0631ed3e959bcb619d5276b546f4ca1534f5c8db450" "ac69b7e2e928dc1560d5a556043c99d8cb0614c30957bd03dfe82be4a9e917ee" default)))
+    ("8aebf25556399b58091e533e455dd50a6a9cba958cc4ebb0aab175863c25b9a4" "6ace5b419f7997a7879ba299aa55ca783b5d60e505d7364ee358be4e94c6c73d" "1157a4055504672be1df1232bed784ba575c60ab44d8e6c7b3800ae76b42f8bd" "7f1263c969f04a8e58f9441f4ba4d7fb1302243355cb9faecb55aec878a06ee9" "8afd01e30f62250645c6d68dce8e3581b606aad57292ea88c3ae1bd37fc29285" "569dc84822fc0ac6025f50df56eeee0843bffdeceff2c1f1d3b87d4f7d9fa661" "73fe242ddbaf2b985689e6ec12e29fab2ecd59f765453ad0e93bc502e6e478d6" "f0ea6118d1414b24c2e4babdc8e252707727e7b4ff2e791129f240a2b3093e32" "2b5aa66b7d5be41b18cc67f3286ae664134b95ccc4a86c9339c886dfd736132d" "18d91d95e20450b0cdab4d7eed600e80c22cc7a4153a87989daa5a1c5aff3b83" "99cbc2aaa2b77374c2c06091494bd9d2ebfe6dc5f64c7ccdb36c083aff892f7d" "2affb26fb9a1b9325f05f4233d08ccbba7ec6e0c99c64681895219f964aac7af" "1e7e097ec8cb1f8c3a912d7e1e0331caeed49fef6cff220be63bd2a6ba4cc365" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "09c2fd812c3c046379d84beb4795db273da1fe84b008dfbb4c03f54a10cf7f0e" "c1f0d3ec9563620ede55e0631ed3e959bcb619d5276b546f4ca1534f5c8db450" "ac69b7e2e928dc1560d5a556043c99d8cb0614c30957bd03dfe82be4a9e917ee" default)))
  '(ecb-options-version "2.40"))
 
 ;; IBuffer is one of the best things about Emacs
