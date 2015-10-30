@@ -29,6 +29,7 @@
 (scroll-bar-mode 0)
 (tool-bar-mode 0)
 (setq ns-use-native-fullscreen nil)
+(toggle-frame-fullscreen)
 
 ;; Modern keyboard shortcuts
 (cua-mode 1)
@@ -139,7 +140,7 @@
 (global-set-key (kbd "C-j") 'replace-string)
 (global-set-key (kbd "s-t") 'helm-for-files)
 (global-set-key (kbd "<f9>") 'recompile)
-(global-set-key (kbd "C-x k") 'kill-this-buffer)
+;; (global-set-key (kbd "C-x k") 'kill-this-buffer)
 (global-set-key (kbd "C-w") 'execute-extended-command)
 
 ;; Save my desktop Emacs, please.
