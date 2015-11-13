@@ -29,7 +29,6 @@
 (scroll-bar-mode 0)
 (tool-bar-mode 0)
 (setq ns-use-native-fullscreen nil)
-(toggle-frame-fullscreen)
 
 ;; Modern keyboard shortcuts
 (cua-mode 1)
