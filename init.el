@@ -155,7 +155,7 @@
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Menlo" :foundry "xos4" :slant normal :weight normal :height 150 :width normal)))))
 
-(load-theme 'jujube t)
+(load-theme 'bliss t)
 
 ;; Edited linum-update-window that adds a bit of padding to the right between linum and the text
 (defun linum-update-window (win)
