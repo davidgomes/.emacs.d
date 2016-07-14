@@ -240,7 +240,7 @@
 
 ;; List all packages
 (setq required-packages
-      '(nyan-mode auto-complete popup clojure-mode crosshairs vline col-highlight vline hl-line+ django-mode elpy yasnippet pyvenv highlight-indentation find-file-in-project company f dash s find-file-in-project fuzzy gccsense gist gh logito pcache git-commit-mode git-rebase-mode go-mode handlebars-mode haskell-mode helm-flycheck helm async flycheck let-alist pkg-info epl dash dash highlight-indentation hl-line+ idomenu iedit jabber jinja2-mode js2-mode json-mode json-snatcher json-reformat json-reformat json-snatcher jsx-mode less-css-mode let-alist logito lua-mode magit magit-popup dash git-commit with-editor dash dash with-editor dash dash magit-popup dash moe-theme nav nose paredit pcache pkg-info epl popup powerline processing-mode pyvenv quack s sass-mode haml-mode scheme-complete scss-mode solarized-theme dash vimrc-mode vline web-mode with-editor dash yasnippet noctilux-theme))
+      '(nyan-mode auto-complete popup clojure-mode crosshairs vline col-highlight vline hl-line+ django-mode elpy yasnippet pyvenv highlight-indentation find-file-in-project company f dash s find-file-in-project fuzzy gccsense gist gh logito pcache git-rebase-mode go-mode handlebars-mode haskell-mode helm-flycheck helm async flycheck let-alist pkg-info epl dash dash highlight-indentation hl-line+ idomenu iedit jabber jinja2-mode js2-mode json-mode json-snatcher json-reformat json-reformat json-snatcher jsx-mode less-css-mode let-alist logito lua-mode magit magit-popup dash git-commit with-editor dash dash with-editor dash dash magit-popup dash moe-theme nav nose paredit pcache pkg-info epl popup powerline processing-mode pyvenv quack s sass-mode haml-mode scheme-complete scss-mode solarized-theme dash vimrc-mode vline web-mode with-editor dash yasnippet noctilux-theme))
 
 ;; Installs missing packages
 (defun install-missing-packages ()
@@ -274,5 +274,3 @@
 (setq starttls-use-gnutls t
       starttls-gnutls-program "/usr/local/bin/gnutls-cli"
       starttls-extra-arguments nil)
-
-
