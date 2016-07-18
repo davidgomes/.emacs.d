@@ -274,3 +274,6 @@
 (setq starttls-use-gnutls t
       starttls-gnutls-program "/usr/local/bin/gnutls-cli"
       starttls-extra-arguments nil)
+
+;; Automatically refresh files when changed on disk
+(global-auto-revert-mode t)
