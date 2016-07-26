@@ -143,6 +143,8 @@
 (global-set-key (kbd "<f9>") 'recompile)
 ;; (global-set-key (kbd "C-x k") 'kill-this-buffer)
 (global-set-key (kbd "C-w") 'execute-extended-command)
+(global-set-key (kbd "s-F") 'projectile-grep)
+(global-set-key (kbd "s-T") 'projectile-find-file)
 
 ;; Save my desktop Emacs, please.
 (desktop-save-mode 1)
