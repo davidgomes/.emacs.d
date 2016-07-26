@@ -294,6 +294,3 @@
 (ecb-byte-compile)
 
 (projectile-global-mode)
-
-
-(setq ecb-source-path '("~/src/"))
