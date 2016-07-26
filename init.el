@@ -139,12 +139,12 @@
 (global-set-key (kbd "<f12>") 'delete-trailing-whitespace)
 (global-set-key (kbd "<f10>") 'fix-indentation)
 (global-set-key (kbd "C-j") 'replace-string)
-(global-set-key (kbd "s-t") 'helm-for-files)
+(global-set-key (kbd "s-t") 'helm-projectile)
+(global-set-key (kbd "s-T") 'helm-for-files)
 (global-set-key (kbd "<f9>") 'recompile)
 ;; (global-set-key (kbd "C-x k") 'kill-this-buffer)
 (global-set-key (kbd "C-w") 'execute-extended-command)
 (global-set-key (kbd "s-F") 'projectile-grep)
-(global-set-key (kbd "s-T") 'projectile-find-file)
 
 ;; Save my desktop Emacs, please.
 (desktop-save-mode 1)
