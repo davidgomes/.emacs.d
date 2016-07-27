@@ -53,8 +53,8 @@
 (add-to-list 'file-coding-system-alist '("\\.vala$" . utf-8))
 
 ;; Javascript stuff
-(setq js-indent-level 2)
-(setq jsx-indent-level 2)
+(setq js-indent-level 4)
+(setq jsx-indent-level 4)
 (autoload 'javascript-mode "javascript-mode" "Javascript editing mode." t)
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'interpreter-mode-alist '("js" . js2-mode))
@@ -216,7 +216,7 @@
  '(js-indent-level 4)
  '(package-selected-packages
    (quote
-    (helm-projectile js2-mode ecb nyan-mode helm gist gccsense fuzzy f elpy django-mode crosshairs clojure-mode auto-complete)))
+    (jsx-mode helm-projectile js2-mode ecb nyan-mode helm gist gccsense fuzzy f elpy django-mode crosshairs clojure-mode auto-complete)))
  '(safe-local-variable-values
    (quote
     ((eval when
