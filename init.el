@@ -42,6 +42,7 @@
 (require 'auto-complete-config)
 (add-to-list 'ac-dictionary-directories "/Users/david/.emacs.d/ac-dict/")
 (ac-config-default)
+(global-auto-complete-mode t)
 
 ;; Redo +
 ;;(require 'redo+)
@@ -222,7 +223,8 @@
     ((eval when
            (fboundp
             (quote rainbow-mode))
-           (rainbow-mode 1))))))
+           (rainbow-mode 1)))))
+ '(send-mail-function (quote mailclient-send-it)))
 
 ;; IBuffer is one of the best things about Emacs
 (require 'ibuf-ext)
