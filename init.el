@@ -39,10 +39,10 @@
 (setq auto-save-default nil)
 
 ;; Set up auto complete
-;(require 'auto-complete-config)
-;(add-to-list 'ac-dictionary-directories "/Users/david/.emacs.d/ac-dict/")
-;(ac-config-default)
-;(global-auto-complete-mode t)
+(require 'auto-complete-config)
+(add-to-list 'ac-dictionary-directories "/Users/david/.emacs.d/ac-dict/")
+(ac-config-default)
+(global-auto-complete-mode t)
 
 ;; Redo +
 ;;(require 'redo+)
