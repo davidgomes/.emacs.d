@@ -60,6 +60,11 @@
 (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 (add-to-list 'interpreter-mode-alist '("js" . js2-mode))
 
+(custom-set-variables
+ '(js2-basic-offset 4)
+ '(js2-bounce-indent-p t)
+)
+
 ;; HTML/Web stuff
 (add-to-list 'auto-mode-alist '("\\.html$" . web-mode))
 (add-to-list 'interpreter-mode-alist '("html" . web-mode))
