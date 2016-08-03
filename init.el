@@ -63,6 +63,7 @@
 (custom-set-variables
  '(js2-basic-offset 4)
  '(js2-bounce-indent-p t)
+ '(js2-indent-switch-body t)
 )
 
 ;; HTML/Web stuff
