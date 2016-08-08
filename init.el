@@ -288,3 +288,7 @@
 (global-ede-mode 1)
 
 (projectile-global-mode)
+
+
+;; http://andrewjamesjohnson.com/suppressing-ad-handle-definition-warnings-in-emacs/
+(setq ad-redefinition-action 'accept)
