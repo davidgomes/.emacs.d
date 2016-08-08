@@ -45,8 +45,8 @@
 (global-auto-complete-mode t)
 
 ;; Redo +
-;;(require 'redo+)
-;;(global-set-key (kbd "C-y") 'redo)
+(require 'redo+)
+(global-set-key (kbd "C-y") 'redo)
 
 ;; Vala Mode
 (autoload 'vala-mode "vala-mode" "Major mode for editing Vala code." t)
