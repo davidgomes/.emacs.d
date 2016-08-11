@@ -152,6 +152,7 @@
 ;; (global-set-key (kbd "C-x k") 'kill-this-buffer)
 (global-set-key (kbd "C-w") 'execute-extended-command)
 (global-set-key (kbd "s-F") 'projectile-grep)
+(global-set-key (kbd "<f6>") (lambda () (interactive) (toggle-frame-fullscreen) (toggle-frame-fullscreen)))
 
 ;; Save my desktop Emacs, please.
 (desktop-save-mode 1)
