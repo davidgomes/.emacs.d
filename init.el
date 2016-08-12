@@ -69,7 +69,8 @@
 ;; HTML/Web stuff
 (add-to-list 'auto-mode-alist '("\\.html$" . web-mode))
 (add-to-list 'interpreter-mode-alist '("html" . web-mode))
-(setq web-mode-markup-indent-offset 2)
+(add-to-list 'auto-mode-alist '("\\.jsx\\'" . web-mode))
+(setq web-mode-markup-indent-offset 4)
 
 ;; CSS stuff
 (setq css-indent-offset 2)
