@@ -73,7 +73,7 @@
 (setq web-mode-markup-indent-offset 4)
 
 ;; CSS stuff
-(setq css-indent-offset 2)
+(setq css-indent-offset 4)
 
 ;; Lua Mode
 (autoload 'lua-mode "lua-mode" "Lua editing mode." t)
