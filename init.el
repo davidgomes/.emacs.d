@@ -64,6 +64,7 @@
  '(js2-basic-offset 4)
  '(js2-bounce-indent-p t)
  '(js2-indent-switch-body t)
+ '(js2-strict-trailing-comma-warning nil)
 )
 
 ;; HTML/Web stuff
