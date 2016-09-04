@@ -29,6 +29,7 @@
 (scroll-bar-mode 0)
 (tool-bar-mode 0)
 (setq ns-use-native-fullscreen nil)
+(setq-default show-trailing-whitespace t)
 
 ;; Modern keyboard shortcuts
 (cua-mode 1)
