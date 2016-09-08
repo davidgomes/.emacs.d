@@ -157,6 +157,27 @@
 (global-set-key (kbd "s-F") 'projectile-grep)
 (global-set-key (kbd "<f6>") (lambda () (interactive) (toggle-frame-fullscreen) (toggle-frame-fullscreen)))
 
+;; From http://ergoemacs.org/emacs/emacs_kill-ring.html
+(defun my-delete-word (arg)
+  "Delete characters forward until encountering the end of a word.
+With argument, do this that many times.
+This command does not push text to `kill-ring'."
+  (interactive "p")
+  (delete-region
+   (point)
+   (progn
+     (forward-word arg)
+     (point))))
+
+(defun my-backward-delete-word (arg)
+  "Delete characters backward until encountering the beginning of a word.
+With argument, do this that many times.
+This command does not push text to `kill-ring'."
+  (interactive "p")
+  (my-delete-word (- arg)))
+
+(global-set-key (kbd "<C-backspace>") 'my-backward-delete-word)
+
 ;; Save my desktop Emacs, please.
 (desktop-save-mode 1)
 
