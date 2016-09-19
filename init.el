@@ -16,7 +16,6 @@
 (setq tab-width 4)
 (setq indent-tabs-mode nil)
 (global-set-key (kbd "RET") 'newline-and-indent)
-(setq search-default-mode #'char-fold-to-regexp)
 
 ;; Don't add newline in end of file
 (setq require-final-newline nil)
