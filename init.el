@@ -116,6 +116,11 @@
 (setq c-default-style "bsd"
       c-basic-offset 2)
 
+;; Go Mode
+(add-hook 'go-mode-hook
+          (lambda ()
+            (setq tab-width 4)))
+
 ;; Spit widths
 (setq split-height-threshold nil)
 (setq split-width-threshold nil)
