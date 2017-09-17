@@ -5,3 +5,9 @@ elpa/
 auto-save-list/
 eshell/
 url/
+recentf
+games/
+ede-projects.el
+network-security.data
+projectile.cache
+projectile-bookmarks.eld
