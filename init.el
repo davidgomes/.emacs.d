@@ -1,7 +1,27 @@
 ;; Configuration file by David Gomes (github.com/davidgomes)
 ;; Many of the files included in my configuration were not created by me.
 
+;; Add some package repositories
+(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
+                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ("melpa-stable" . "https://stable.melpa.org/packages/")
+                         ("melpa" . "http://melpa.milkbox.net/packages/")))
+
 (package-initialize)
+
+;; List all packages
+(setq required-packages
+      '(nyan-mode auto-complete popup crosshairs vline col-highlight vline hl-line+ django-mode elpy yasnippet pyvenv highlight-indentation find-file-in-project company f dash s find-file-in-project fuzzy gist gh logito pcache go-mode handlebars-mode haskell-mode helm-flycheck helm async flycheck let-alist pkg-info epl dash dash highlight-indentation hl-line+ idomenu iedit jabber jinja2-mode js2-mode json-mode json-snatcher json-reformat json-reformat json-snatcher jsx-mode less-css-mode let-alist logito lua-mode magit magit-popup dash git-commit with-editor dash dash with-editor dash magit-popup dash moe-theme nav nose paredit pcache pkg-info epl popup powerline processing-mode pyvenv quack s sass-mode haml-mode scheme-complete scss-mode solarized-theme dash vimrc-mode vline web-mode with-editor dash yasnippet noctilux-theme helm-projectile neotree))
+
+;; Installs missing packages
+(defun install-missing-packages ()
+  "Installs required packages that are missing"
+  (interactive)
+  (mapc (lambda (package)
+          (unless (package-installed-p package)
+                  (package-install package)))
+        required-packages)
+  (message "Installed all missing packages!"))
 
 ;; Load plugins
 (add-to-list 'load-path "~/.emacs.d/lisp/")
@@ -76,7 +96,7 @@
  '(js2-strict-trailing-comma-warning nil)
  '(package-selected-packages
    (quote
-    (magit handlebars-mode web-mode go-mode markdown-mode base16-theme sunshine cider rjsx-mode auto-complete jsx-mode helm-projectile js2-mode nyan-mode helm gist gccsense fuzzy f elpy django-mode crosshairs clojure-mode)))
+    (neotree noctilux-theme web-mode vimrc-mode solarized-theme scss-mode scheme-complete sass-mode quack processing-mode powerline paredit nose nav moe-theme magit lua-mode less-css-mode json-mode jinja2-mode jabber iedit idomenu helm-flycheck haskell-mode handlebars-mode go-mode auto-complete jsx-mode helm-projectile js2-mode nyan-mode helm gist fuzzy f elpy django-mode crosshairs clojure-mode magit handlebars-mode markdown-mode sunshine cider rjsx-mode)))
  '(safe-local-variable-values
    (quote
     ((eval when
@@ -219,7 +239,7 @@ This command does not push text to `kill-ring'."
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Menlo" :foundry "xos4" :slant normal :weight normal :height 150 :width normal)))))
+ )
 
 (load-theme 'bliss t)
 
@@ -275,12 +295,6 @@ This command does not push text to `kill-ring'."
 (add-to-list 'ibuffer-never-show-predicates "^\\*Completions")
 (global-set-key (kbd "s-B") 'ibuffer)
 (kill-buffer "*scratch*")
-
-;; Add some package repositories
-(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")
-                         ("melpa-stable" . "https://stable.melpa.org/packages/")
-                         ("melpa" . "http://melpa.milkbox.net/packages/")))
 
 ;; Put minimap on the right
 (setq minimap-window-location 'right)
