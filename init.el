@@ -352,3 +352,5 @@ This command does not push text to `kill-ring'."
 (setq sql-user "root")
 (setq sql-password "")
 (setq sql-server "172.17.0.2")
+
+(setq recentf-max-menu-items 200)
