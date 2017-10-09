@@ -351,6 +351,6 @@ This command does not push text to `kill-ring'."
 (setq sql-mysql-program "/usr/local/bin/mysql")
 (setq sql-user "root")
 (setq sql-password "")
-(setq sql-server "172.17.0.2")
+(setq sql-server "localhost")
 
-(setq recentf-max-menu-items 200)
+(setq recentf-max-menu-items 400)
