@@ -74,12 +74,12 @@
 (add-to-list 'file-coding-system-alist '("\\.vala$" . utf-8))
 
 ;; Javascript stuff
-(setq js-indent-level 4)
-(setq jsx-indent-level 4)
-(setq js2-indent-switch-body t)
-(autoload 'javascript-mode "javascript-mode" "Javascript editing mode." t)
-(add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
-(add-to-list 'interpreter-mode-alist '("js" . js2-mode))
+;; (setq js-indent-level 4)
+;; (setq jsx-indent-level 4)
+;; (setq js2-indent-switch-body t)
+;; (autoload 'javascript-mode "javascript-mode" "Javascript editing mode." t)
+;; (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
+;; (add-to-list 'interpreter-mode-alist '("js" . js2-mode))
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -96,7 +96,7 @@
  '(js2-strict-trailing-comma-warning nil)
  '(package-selected-packages
    (quote
-    (neotree noctilux-theme web-mode vimrc-mode solarized-theme scss-mode scheme-complete sass-mode quack processing-mode powerline paredit nose nav moe-theme magit lua-mode less-css-mode json-mode jinja2-mode jabber iedit idomenu helm-flycheck haskell-mode handlebars-mode go-mode auto-complete jsx-mode helm-projectile js2-mode nyan-mode helm gist fuzzy f elpy django-mode crosshairs clojure-mode magit handlebars-mode markdown-mode sunshine cider rjsx-mode)))
+    (graphql-mode neotree noctilux-theme web-mode vimrc-mode solarized-theme scss-mode scheme-complete sass-mode quack processing-mode powerline paredit nose nav moe-theme magit lua-mode less-css-mode json-mode jinja2-mode jabber iedit idomenu helm-flycheck haskell-mode handlebars-mode go-mode auto-complete jsx-mode helm-projectile js2-mode nyan-mode helm gist fuzzy f elpy django-mode crosshairs clojure-mode magit handlebars-mode markdown-mode sunshine cider rjsx-mode)))
  '(safe-local-variable-values
    (quote
     ((eval when
@@ -204,7 +204,7 @@
 (global-set-key (kbd "s-T") 'helm-for-files)
 (global-set-key (kbd "s-b") 'helm-mini)
 (global-set-key (kbd "<f9>") 'recompile)
-;; (global-set-key (kbd "C-x k") 'kill-this-buffer)
+(global-set-key (kbd "C-x k") 'kill-this-buffer)
 (global-set-key (kbd "C-w") 'execute-extended-command)
 (global-set-key (kbd "s-F") 'projectile-grep)
 (global-set-key (kbd "<f6>") (lambda () (interactive) (toggle-frame-fullscreen) (toggle-frame-fullscreen)))
