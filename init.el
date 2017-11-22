@@ -342,6 +342,7 @@ This command does not push text to `kill-ring'."
 (global-ede-mode 1)
 
 (projectile-global-mode)
+(setq projectile-enable-caching t)
 
 ;; http://andrewjamesjohnson.com/suppressing-ad-handle-definition-warnings-in-emacs/
 (setq ad-redefinition-action 'accept)
