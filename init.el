@@ -3,11 +3,12 @@
 
 ;; Add some package repositories
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "http://marmalade-repo.org/packages/")
+                         ;("marmalade" . "http://marmalade-repo.org/packages/")
                          ("melpa-stable" . "https://stable.melpa.org/packages/")
                          ("melpa" . "http://melpa.milkbox.net/packages/")))
 
 (package-initialize)
+
 
 ;; List all packages
 (setq required-packages
@@ -17,6 +18,7 @@
 (defun install-missing-packages ()
   "Installs required packages that are missing"
   (interactive)
+  (package-refresh-contents)
   (mapc (lambda (package)
           (unless (package-installed-p package)
                   (package-install package)))
