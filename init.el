@@ -19,7 +19,7 @@
   (interactive)
   (mapc (lambda (package)
           (unless (package-installed-p package)
-                  (package-install package)))
+            (package-install package)))
         required-packages)
   (message "Installed all missing packages!"))
 
@@ -65,8 +65,8 @@
 (global-auto-complete-mode t)
 
 ;; Redo +
-;(require 'redo+)
-;(global-set-key (kbd "C-y") 'redo)
+                                        ;(require 'redo+)
+                                        ;(global-set-key (kbd "C-y") 'redo)
 
 ;; Vala Mode
 (autoload 'vala-mode "vala-mode" "Major mode for editing Vala code." t)
@@ -80,6 +80,7 @@
 ;; (autoload 'javascript-mode "javascript-mode" "Javascript editing mode." t)
 ;; (add-to-list 'auto-mode-alist '("\\.js$" . js2-mode))
 ;; (add-to-list 'interpreter-mode-alist '("js" . js2-mode))
+(load-file "~/.emacs.d/flow-for-emacs/flow.el")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
@@ -96,7 +97,7 @@
  '(js2-strict-trailing-comma-warning nil)
  '(package-selected-packages
    (quote
-    (graphql-mode neotree noctilux-theme web-mode vimrc-mode solarized-theme scss-mode scheme-complete sass-mode quack processing-mode powerline paredit nose nav moe-theme magit lua-mode less-css-mode json-mode jinja2-mode jabber iedit idomenu helm-flycheck haskell-mode handlebars-mode go-mode auto-complete jsx-mode helm-projectile js2-mode nyan-mode helm gist fuzzy f elpy django-mode crosshairs clojure-mode magit handlebars-mode markdown-mode sunshine cider rjsx-mode)))
+    (caml graphql-mode neotree noctilux-theme web-mode vimrc-mode solarized-theme scss-mode scheme-complete sass-mode quack processing-mode powerline paredit nose nav moe-theme magit lua-mode less-css-mode json-mode jinja2-mode jabber iedit idomenu helm-flycheck haskell-mode handlebars-mode go-mode auto-complete jsx-mode helm-projectile js2-mode nyan-mode helm gist fuzzy f elpy django-mode crosshairs clojure-mode magit handlebars-mode markdown-mode sunshine cider rjsx-mode)))
  '(safe-local-variable-values
    (quote
     ((eval when
@@ -185,6 +186,7 @@
 (global-unset-key (kbd "C-w"))
 (global-unset-key (kbd "C-t"))
 (global-unset-key (kbd "C-x C-f"))
+(global-unset-key (kbd "C-h"))
 
 (global-set-key (kbd "C-f") 'isearch-forward)
 (global-set-key (kbd "C-x C-f") 'helm-find-files)
@@ -199,7 +201,7 @@
 (global-set-key (kbd "s-3") 'split-window-right)
 (global-set-key (kbd "<f12>") 'delete-trailing-whitespace)
 (global-set-key (kbd "<f10>") 'fix-indentation)
-(global-set-key (kbd "C-j") 'replace-string)
+(global-set-key (kbd "C-h") 'replace-string)
 (global-set-key (kbd "s-t") 'helm-projectile)
 (global-set-key (kbd "s-T") 'helm-for-files)
 (global-set-key (kbd "s-b") 'helm-mini)
@@ -208,6 +210,10 @@
 (global-set-key (kbd "C-w") 'execute-extended-command)
 (global-set-key (kbd "s-F") 'projectile-grep)
 (global-set-key (kbd "<f6>") (lambda () (interactive) (toggle-frame-fullscreen) (toggle-frame-fullscreen)))
+(global-set-key (kbd "C-j") 'next-line)
+(global-set-key (kbd "C-k") 'previous-line)
+(global-set-key (kbd "C-h") 'backward-char)
+(global-set-key (kbd "C-l") 'forward-char)
 
 ;; From http://ergoemacs.org/emacs/emacs_kill-ring.html
 (defun my-delete-word (arg)
@@ -309,7 +315,7 @@ This command does not push text to `kill-ring'."
   (interactive)
   (mapc (lambda (package)
           (unless (package-installed-p package)
-                  (package-install package)))
+            (package-install package)))
         required-packages)
   (message "Installed all missing packages!"))
 
